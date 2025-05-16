@@ -1,0 +1,278 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Project</title>
+
+
+</head>
+<body>
+
+<!-- ---------- Navigation Bar ----------  --> 
+        <nav class="navbar">    
+        <div class="myLogo">
+            <img src="My Images/cropped_logo_with_margin.png" alt="logo" class="logo">
+            <a>My Java Project</a>
+        </div>
+
+            <div class="nav-links">
+                <a>Main</a>
+                <a>About</a>
+                <a>Compilation</a>
+                <img src="My Images/icons8-github-384.png" alt="github" class="myGit">
+            </div>
+            </nav>
+
+<!-- ---------- HEADLINE ----------  --> 
+ <div class="headline_div_support">
+        <div class="headline">
+            <div class="headline_parent">
+                <h1 class="myHeadline">My Project</h1>
+                <p class="myP">Welcome to my project! Here you can find all the information you need.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- ---------- Reference UI DONT DELETE ----------  -->     
+
+<div class="container">
+    <div class="main_input">
+        <div class="parent ">
+            <div class="child_btn ">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="child_panel "> 
+            <pre><code id="elevator_input">
+import java.util.Scanner;
+
+public class ElevatorSystem {
+    public static void main(String[] args) throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+
+        String welcomeMessage = "\nWelcome to Elevator System!\n\n";
+        String reminder = "You are currently on floor: ";
+        String chooseFloor = "Please choose your destination floor: ";
+        String youArrived = "You have arrived at floor: ";
+        String youAlready = "You are already on the desired floor.";
+        String tryAgain = "\nDo you want to try again? (yes/no): ";
+        String goodbye = "\nThank you for using the Elevator System!\n";
+        int currentFloor = 1;
+
+        boolean isRunning = true;
+        
+
+        Thread.sleep(2000);
+        
+        for (char a: welcomeMessage.toCharArray()) {
+            System.out.print(a);
+            Thread.sleep(10);
+        }
+
+while (isRunning) {
+
+        Thread.sleep(2000);
+        for (char b: reminder.toCharArray()) {
+            System.out.print(b);
+            Thread.sleep(10);   
+        }
+
+        System.out.println(" " + currentFloor + " \n");
+        
+        Thread.sleep(2000);
+        for (char c: chooseFloor.toCharArray()) {
+            System.out.print(c);
+            Thread.sleep(10);   
+        }
+        Thread.sleep(1000);
+        int destinationFloor = scanner.nextInt();
+
+        if (destinationFloor > currentFloor) {
+            for (int i = currentFloor + 1; i < destinationFloor; i++) {
+                Thread.sleep(2000);
+                System.out.println("Going Up... Floor " + i);
+                
+            }
+            Thread.sleep(2500);
+            for (char d: youArrived.toCharArray()) {
+                System.out.print(d);
+                Thread.sleep(10);   
+            }
+            Thread.sleep(1000);
+            System.out.println(destinationFloor + ".");
+        } else if (destinationFloor < currentFloor) {
+            for (int i = currentFloor - 1; i > destinationFloor; i--) {
+                Thread.sleep(2000);
+                System.out.println("Going Down... Floor " + i);
+                
+            }
+            Thread.sleep(2000);
+            for (char d: youArrived.toCharArray()) {
+                System.out.print(d);
+                Thread.sleep(10);   
+            }
+            Thread.sleep(1000);
+            System.out.println(destinationFloor + "\n");
+            
+        } else {
+            Thread.sleep(1000);
+            for (char e: youAlready.toCharArray()) {
+                System.out.print(e);
+                Thread.sleep(10);   
+            }
+           
+            
+        }
+
+        
+         currentFloor = destinationFloor;
+
+            Thread.sleep(2000);
+            for (char f : tryAgain.toCharArray()) {
+                System.out.print(f);
+                Thread.sleep(10);
+            }
+
+            scanner.nextLine(); // clear buffer
+            String answer = scanner.nextLine();
+
+            if (!answer.equalsIgnoreCase("yes")) {
+                Thread.sleep(1000);
+                for (char g : goodbye.toCharArray()) {
+                    System.out.print(g);
+                    Thread.sleep(10);
+                }
+                isRunning = false;
+            }
+        }
+         
+
+        scanner.close();
+       }
+    }
+
+
+        </code></pre>
+            <script src="index.js"></script>
+
+        </div>
+    </div>
+ </div>
+
+ <!---------------------- Gap IO ---------------------->
+
+ <div class="main_output">
+        <div class="parent_output ">
+            <div class="child_btn_output">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="child_panel_output"> 
+            <pre><code class="elevator_output">
+Welcome to Elevator System!
+
+You are currently on floor:  1 
+
+Please choose your destination floor: 5
+Going Up... Floor 2
+Going Up... Floor 3
+Going Up... Floor 4
+You have arrived at floor: 5.
+
+Do you want to try again? (yes/no): yes
+You are currently on floor:  5 
+
+Please choose your destination floor: 3
+Going Down... Floor 4
+You have arrived at floor: 3
+
+
+Do you want to try again? (yes/no): no
+
+Thank you for using the Elevator System!
+
+
+
+                        </code></pre>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- ---------- Reference UI DONT DELETE ----------  --> 
+
+
+
+<!-- ---------- ABOUT ME  ----------  --> 
+
+
+
+<div class="myPaolo">
+    <div class="About_me">
+        <div class="myInformation">
+            <img src="My Images/Paolo.jpg" style="height: 220px; width: auto; margin-top: 4px;">
+        </div>
+        <div class="myInfoText">
+             <h2>Paolo Tabal</h2>
+             <p>A Computer Engineering Student at</p> 
+             <p>Rizal Technological University</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ---------- CONTENT  ----------  --> 
+
+<div class="content_1st">
+    <div class="whatisjava">
+        <div class="javais">
+            <div class="headline_parent2">
+                <h1 class="myHeadline2">What Is Java Programming<br>Language</h1>
+                <p class="myP2 myP3">Java is a powerful, object-oriented programming language used to develop web, desktop, mobile, and<br>
+                    enterprise applications across different platforms.<br><br> </p>
+
+                <a class="myP3 a">Here are five topics I’ve learned from Java:</a>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------- CARDS  ----------  --> 
+
+<div class="card_container">
+    <div class="chapter1_parent ">
+        <a class="chpter">Chapter 1</a>  
+        <div class="title1 a1"></div>
+    </div>
+    <div class="chapter2_parent b">
+        <a class="chpter">Chapter 2</a> 
+        <div class="title2 a2"></div>
+    </div>
+    <div class="chapter3_parent c">
+        <a class="chpter">Chapter 3</a> 
+        <div class="title3 a3"></div>
+    </div>
+    <div class="chapter4_parent d">
+        <a class="chpter">Chapter 4</a> 
+        <div class="title4 a4"></div>
+
+    </div>
+    <div class="chapter5_parent e">
+        <a class="chpter">Chapter 5</a> 
+        <div class="title5 a5"></div>
+    </div>
+</div>
+
+
+    
+</body>
+</html>

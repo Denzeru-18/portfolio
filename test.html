@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using forEach()</title>
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .highlight {
+      color: rgb(100, 196, 255); /* Color the word in light blue */
+      font-weight: bold; /* Make the word bold */
+      transition: 0.2s;
+    }
+
+    .highlight:hover {
+      color: rgb(82, 161, 211);
+      letter-spacing: 0.3px;
+
+    }
+
+    .highlight2 {
+      color: rgb(255, 72, 72); /* Color the word in light blue */
+      font-weight: bold; /* Make the word bold */
+    }
+
+    .highlight3 {
+      color: rgb(115, 255, 72); /* Color the word in light blue */
+      font-weight: bold; /* Make the word bold */
+    }
+
+
+
+
+    .sentence {
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1s steps(50) forwards, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 27ch; }
+
+  from { width: 50ch; }
+  to { width: 70ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+  </style>
+</head>
+<body>
+
+<h2>Highlight Words in a Sentence</h2>
+
+<pre id="sentence" class="sentence"><code>Welcome to Elevator System!<br>
+<br>
+</code></pre>
+
+<p >I am learning JavaScript and I love it!</p>
+
+<script src="index.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+<script>
+  /*
+  
+      // Step 1: Define the words you want to highlight
+      const wordsToHighlight2 = ["10", "1000", "2000", "2500", "100", "200", "300", "400", "500", "600", "700", "800", "900"];
+  
+    // Step 2: Get the original sentence
+    let sentence2 = document.getElementById("sentence2").textContent;
+  
+    // Step 3: Use forEach() to loop through the words you want to highlight
+    wordsToHighlight.forEach(word => {
+      // Step 4: Replace each word with a highlighted version
+      const regex = new RegExp("\\b" + word + "\\b", "g"); // Match the word
+      sentence = sentence.replace(regex, `<span class="highlight2">${word}</span>`); // Wrap the word in <span> with a class
+    });
+  
+    // Step 5: Update the sentence with the highlighted words
+    document.getElementById("sentence").innerHTML = sentence;
+    */
+  
+  </script>
